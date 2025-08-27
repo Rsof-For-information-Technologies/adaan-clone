@@ -44,3 +44,19 @@ body {
 .swiper-button-next:after {
   display: none;
 }
+
+@keyframes slideAndReturn {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.group:hover .arrow-icon {
+  animation: slideAndReturn 0.5s ease-in-out forwards;
+}

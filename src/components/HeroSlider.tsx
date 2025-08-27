@@ -1,25 +1,26 @@
 "use client"
-import { useEffect, useRef, useState } from 'react';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Thumbs, Autoplay, EffectFade } from 'swiper/modules';
-import { motion, AnimatePresence } from 'motion/react';
+import { AnimatePresence, motion } from 'motion/react';
 import Image from 'next/image';
+import { useEffect, useRef, useState } from 'react';
+import { Autoplay, EffectFade, Navigation, Thumbs } from 'swiper/modules';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import type { SwiperRef } from 'swiper/react';
 
 // Import Swiper styles
 import 'swiper/css';
-import 'swiper/css/navigation';
 import 'swiper/css/effect-fade';
+import 'swiper/css/navigation';
 
 const HeroSlider = () => {
     const [activeIndex, setActiveIndex] = useState(0);
     const [progress, setProgress] = useState(0);
-    const [hoveredThumb, setHoveredThumb] = useState(null);
+    const [hoveredThumb, setHoveredThumb] = useState<number | null>(null);
     const [isContentHovered, setIsContentHovered] = useState(false);
-    const progressInterval = useRef(null);
-    const mainSwiperRef = useRef(null);
+    const progressInterval = useRef<NodeJS.Timeout | null>(null);
+    const mainSwiperRef = useRef<SwiperRef>(null);
     const progressStartTime = useRef(0);
     const pausedProgress = useRef(0);
-    const progressDuration = 5000; 
+    const progressDuration = 5000;
 
     // Slide data
     const slides = [
@@ -57,12 +58,6 @@ const HeroSlider = () => {
         },
     ];
 
-    // Text animation variants
-    const textVariants = {
-        hidden: { opacity: 0, y: 30 },
-        visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } }
-    };
-
     // Start progress bar animation
     useEffect(() => {
         if (progressInterval.current) {
@@ -82,32 +77,38 @@ const HeroSlider = () => {
                 setProgress(newProgress);
 
                 if (newProgress >= 100) {
-                    clearInterval(progressInterval.current);
+                    if (progressInterval.current) {
+                        clearInterval(progressInterval.current);
+                    }
                     // Immediately trigger slide change when progress completes
-                    if (mainSwiperRef.current && mainSwiperRef.current.swiper) {
+                    if (mainSwiperRef.current?.swiper) {
                         mainSwiperRef.current.swiper.slideNext();
                     }
                 }
             }
         };
 
+        // Store the interval reference
+        let currentInterval: NodeJS.Timeout | null = null;
+
         // Only start progress if not hovering
         if (hoveredThumb === null && !isContentHovered) {
-            progressInterval.current = setInterval(updateProgress, 50);
+            currentInterval = setInterval(updateProgress, 50);
+            progressInterval.current = currentInterval;
         }
 
         return () => {
-            if (progressInterval.current) {
-                clearInterval(progressInterval.current);
+            if (currentInterval) {
+                clearInterval(currentInterval);
             }
         };
-    }, [activeIndex, hoveredThumb, isContentHovered]);
+    }, [activeIndex, hoveredThumb, isContentHovered, progress]);
 
     // Handle content hover - pause autoplay and progress
     const handleContentHover = () => {
         setIsContentHovered(true);
         pausedProgress.current = progress;
-        if (mainSwiperRef.current && mainSwiperRef.current.swiper) {
+        if (mainSwiperRef.current?.swiper) {
             mainSwiperRef.current.swiper.autoplay.stop();
         }
     };
@@ -115,7 +116,7 @@ const HeroSlider = () => {
     // Handle content leave - resume autoplay and progress
     const handleContentLeave = () => {
         setIsContentHovered(false);
-        if (mainSwiperRef.current && mainSwiperRef.current.swiper && hoveredThumb === null) {
+        if (mainSwiperRef.current?.swiper && hoveredThumb === null) {
             mainSwiperRef.current.swiper.autoplay.start();
             // Adjust start time to continue from where we left off
             progressStartTime.current = Date.now() - (pausedProgress.current / 100) * progressDuration;
@@ -123,10 +124,10 @@ const HeroSlider = () => {
     };
 
     // Handle thumbnail hover - pause autoplay and progress
-    const handleThumbHover = (index) => {
+    const handleThumbHover = (index: number) => {
         setHoveredThumb(index);
         pausedProgress.current = progress;
-        if (mainSwiperRef.current && mainSwiperRef.current.swiper) {
+        if (mainSwiperRef.current?.swiper) {
             mainSwiperRef.current.swiper.autoplay.stop();
         }
     };
@@ -134,7 +135,7 @@ const HeroSlider = () => {
     // Handle thumbnail leave - resume autoplay and progress
     const handleThumbLeave = () => {
         setHoveredThumb(null);
-        if (mainSwiperRef.current && mainSwiperRef.current.swiper && !isContentHovered) {
+        if (mainSwiperRef.current?.swiper && !isContentHovered) {
             mainSwiperRef.current.swiper.autoplay.start();
             // Adjust start time to continue from where we left off
             progressStartTime.current = Date.now() - (pausedProgress.current / 100) * progressDuration;
@@ -142,8 +143,8 @@ const HeroSlider = () => {
     };
 
     // Handle thumbnail click to change slide
-    const handleThumbClick = (index) => {
-        if (mainSwiperRef.current && mainSwiperRef.current.swiper) {
+    const handleThumbClick = (index: number) => {
+        if (mainSwiperRef.current?.swiper) {
             mainSwiperRef.current.swiper.slideToLoop(index);
         }
     };
@@ -196,7 +197,10 @@ const HeroSlider = () => {
                                             key={`thumb-${slide.id}`}
                                             initial="hidden"
                                             animate="visible"
-                                            variants={textVariants}
+                                            variants={{
+                                                hidden: { opacity: 0, y: 30 },
+                                                visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } }
+                                            }}
                                             transition={{ delay: 0.2 }}
                                             className="text-lg mb-8"
                                         >
@@ -206,7 +210,10 @@ const HeroSlider = () => {
                                             key={`title-${slide.id}`}
                                             initial="hidden"
                                             animate="visible"
-                                            variants={textVariants}
+                                            variants={{
+                                                hidden: { opacity: 0, y: 30 },
+                                                visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } }
+                                            }}
                                             className="text-4xl md:text-5xl font-bold mb-6"
                                         >
                                             {slide.title}
@@ -215,7 +222,10 @@ const HeroSlider = () => {
                                             key={`btn-${slide.id}`}
                                             initial="hidden"
                                             animate="visible"
-                                            variants={textVariants}
+                                            variants={{
+                                                hidden: { opacity: 0, y: 30 },
+                                                visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } }
+                                            }}
                                             transition={{ delay: 0.4 }}
                                             href="#"
                                             className="group inline-flex items-center gap-3 px-2 py-3 text-white font-medium rounded-full"
