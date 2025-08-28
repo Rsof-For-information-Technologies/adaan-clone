@@ -30,7 +30,7 @@ const data = [
 const SustainabilitySection = () => {
   return (
     <section className="py-28 bg-white">
-      <div className="max-w-[1200px] mx-auto px-6">
+      <div className="max-w-[1250px] mx-auto px-6">
         {/* Heading */}
         <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center mb-16 gap-6">
           <div>
@@ -38,9 +38,9 @@ const SustainabilitySection = () => {
               Sustainability
             </p>
             <h2 className="text-3xl lg:text-4xl font-semibold text-gray-900 mb-4">
-              <span className="bg-blue-600 text-white px-2">Environmental protection</span>
+              Environmental protection
             </h2>
-            <p className="text-[20px] font-light mb-[22px] max-w-[500px]">
+            <p className="text-[20px] font-light mb-[22px] max-w-[600px]">
               As our business operations expand, so do the actions we undertake
               aimed at protecting ecosystems and supporting the energy and
               materials transitions.
@@ -89,7 +89,7 @@ const SustainabilitySection = () => {
               href={item.href}
               className="group block"
             >
-              <div className="relative h-[220px] lg:h-[240px] overflow-hidden rounded-lg mb-5">
+              <div className="relative h-[220px] lg:h-[240px] overflow-hidden rounded-xl mb-5">
                 <Image
                   src={item.image}
                   alt={item.title}

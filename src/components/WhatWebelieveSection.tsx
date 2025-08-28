@@ -56,13 +56,15 @@ const WhatWebelieveSection = () => {
   return (
     <section className="py-16 bg-white">
       <div className="max-w-[1400px] mx-auto px-6">
-        <h2 className="uppercase tracking-wider text-gray-600 text-sm mb-4">
-          WHAT WE BELIEVE
-        </h2>
-        <p className="text-[20px] font-light mb-[22px] max-w-[500px]">
-          We believe in the power of energy to help transform lives, enhance
-          communities, and advance human progress.
-        </p>
+        <div className="p-18">
+          <h2 className="uppercase tracking-wider text-gray-600 text-sm mb-4">
+            WHAT WE BELIEVE
+          </h2>
+          <p className="text-[20px] font-light mb-[22px] max-w-[600px]">
+            We believe in the power of energy to help transform lives, enhance
+            communities, and advance human progress.
+          </p>
+        </div>
 
         {/* Slider */}
         <div className="relative">

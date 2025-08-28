@@ -43,8 +43,8 @@ const BlogsSlider = () => {
   return (
     <section className="py-12 bg-gray-50">
       <div className="max-w-[1400px] mx-auto px-6">
-        <div className="flex justify-between items-center mb-20">
-          <h2 className="text-3xl text-gray-900 max-w-[500px]">
+        <div className="flex justify-between items-center m-18">
+          <h2 className="text-4xl text-gray-900 max-w-[600px]">
             News from the world of Aramco
           </h2>
           <div className="text-blue-600 flex items-center gap-3 text-sm font-medium group ">

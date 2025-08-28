@@ -24,10 +24,10 @@ const data = [
 const MagazineSection = () => {
   return (
     <section className="py-28 bg-white">
-      <div className="max-w-[1200px] mx-auto px-6">
+      <div className="max-w-[1260px] mx-auto px-6">
         {/* Heading */}
         <div className="flex justify-between items-center mb-20">
-          <h2 className="text-3xl text-gray-900 max-w-[500px]">
+          <h2 className="text-3xl text-gray-900 max-w-[600px]">
             Explore the latest from Elements magazine
           </h2>
           <div className="text-blue-600 flex items-center gap-3 text-sm font-medium group ">
@@ -70,7 +70,7 @@ const MagazineSection = () => {
           <div className="grid gap-6">
             {data.slice(0, 2).map((item, idx) => (
               <Link key={idx} href={item.href} className="group block h-full">
-                <div className="relative h-[200px] md:h-[300px] overflow-hidden rounded-lg mb-3">
+                <div className="relative h-[200px] md:h-[300px] overflow-hidden rounded-t-[20px] rounded-l-[20px] mb-3">
                   <Image
                     src={item.image}
                     alt={item.title}
@@ -78,7 +78,7 @@ const MagazineSection = () => {
                     className="object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                 </div>
-                <h3 className="text-base text-gray-900 mb-2">{item.title}</h3>
+                <h3 className=" text-gray-900 my-4 text-[24px] font-light">{item.title}</h3>
                 <span className="text-blue-600 flex items-center gap-2 text-sm font-medium">
                   <motion.svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -106,7 +106,7 @@ const MagazineSection = () => {
             href={data[2].href}
             className="group block lg:col-span-2"
           >
-            <div className="relative h-[200px] md:h-[712px] overflow-hidden rounded-lg mb-3">
+            <div className="relative h-[200px] md:h-[712px] overflow-hidden rounded-t-[20px] rounded-l-[20px] mb-3">
               <Image
                 src={data[2].image}
                 alt={data[2].title}
@@ -114,7 +114,7 @@ const MagazineSection = () => {
                 className="object-cover group-hover:scale-105 transition-transform duration-500"
               />
             </div>
-            <h3 className="text-base text-gray-900 mb-2">{data[2].title}</h3>
+            <h3 className="text-gray-900 my-4 text-[24px] font-light">{data[2].title}</h3>
             <span className="text-blue-600 flex items-center gap-2 text-sm font-medium">
               <motion.svg
                 xmlns="http://www.w3.org/2000/svg"
