@@ -54,13 +54,13 @@ const WhatWebelieveSection = () => {
   const progress = ((activeIndex + 1) / data.length) * 100;
 
   return (
-    <section className="py-16 bg-white">
+    <section className="py-16 md:py-24 bg-white">
       <div className="max-w-[1400px] mx-auto px-6">
-        <div className="p-18">
-          <h2 className="uppercase tracking-wider text-gray-600 text-sm mb-4">
+        <div className="px-0 md:px-16 pb-10 md:pb-16">
+          <h2 className="uppercase tracking-wider text-[#1f1f1f] text-sm mb-4">
             WHAT WE BELIEVE
           </h2>
-          <p className="text-[20px] font-light mb-[22px] max-w-[600px]">
+          <p className="text-2xl font-normal text-[#1f1f1f] mb-[22px] max-w-[600px]">
             We believe in the power of energy to help transform lives, enhance
             communities, and advance human progress.
           </p>
@@ -87,7 +87,6 @@ const WhatWebelieveSection = () => {
               1024: { slidesPerView: 3 },
               1280: { slidesPerView: 5 },
             }}
-            className="!pb-12"
           >
             {data.map((item, idx) => (
               <SwiperSlide key={idx}>
@@ -103,8 +102,8 @@ const WhatWebelieveSection = () => {
                     />
                   </div>
                   <div className="py-4">
-                    <p className=" text-gray-900 mb-2">{item.title}</p>
-                    <span className="text-blue-600 flex items-center gap-2 text-sm font-medium">
+                    <p className="text-[#1f1f1f] text-sm font-normal mb-2">{item.title}</p>
+                    <span className="text-blue-400 flex items-center gap-2 text-sm font-medium">
                       <motion.svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="16"

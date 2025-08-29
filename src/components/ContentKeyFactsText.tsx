@@ -19,11 +19,11 @@ const keyFactsData = [
 
 const ContentKeyFactsText = () => {
   return (
-    <section className="py-16 bg-[#323232]">
-      <div className="max-w-[1400px] mx-auto px-24">
+    <section className="py-16 md:py-24 bg-[#323232]">
+      <div className="max-w-[1260px] mx-auto px-6">
         {/* Section Title */}
-        <div className="mb-20">
-          <h2 className="text-3xl font-light text-white">
+        <div className="pb-10 md:pb-18">
+          <h2 className="text-[28px] md:text-[40px] font-normal text-white">
             At a glance
           </h2>
         </div>
@@ -58,7 +58,7 @@ const ContentKeyFactsText = () => {
               </div>
 
               {/* Divider Line */}
-              <div className="mt-6 h-px bg-gray-600 w-full" />
+              <div className="mt-6 h-px bg-white w-full" />
             </motion.div>
           ))}
         </div>

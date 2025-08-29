@@ -29,31 +29,31 @@ const data = [
 
 const SustainabilitySection = () => {
   return (
-    <section className="py-28 bg-white">
+    <section className="py-16 md:py-24 bg-white">
       <div className="max-w-[1250px] mx-auto px-6">
         {/* Heading */}
-        <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center mb-16 gap-6">
+        <div className="flex flex-col lg:flex-row justify-between items-end mb-12 md:mb-20 gap-6">
           <div>
-            <p className="uppercase tracking-wide text-sm text-gray-600 mb-2">
+            <p className="uppercase tracking-widest text-[#1f1f1f] text-sm mb-5">
               Sustainability
             </p>
-            <h2 className="text-3xl lg:text-4xl font-semibold text-gray-900 mb-4">
-              Environmental protection
+            <h2 className="text-[28px] md:text-[40px] font-normal text-[#1f1f1f] max-w-[600px] mb-4">
+                Environmental protection
             </h2>
-            <p className="text-[20px] font-light mb-[22px] max-w-[600px]">
+            <p className="text-[#1f1f1f] text-lg font-light mb-[22px] max-w-[600px]">
               As our business operations expand, so do the actions we undertake
               aimed at protecting ecosystems and supporting the energy and
               materials transitions.
             </p>
           </div>
 
-          <div className="text-blue-600 flex items-center gap-3 text-sm font-medium group ">
-            Visit the magazine
+          <div className="text-blue-400 flex items-center gap-3 text-sm font-medium group ">
+            Aramco & Sustainability
             <Link href={"#"} className="">
               <div className="flex flex-col justify-between items-center">
                 {/* Arrow */}
                 <motion.span
-                  className="self-end inline-flex items-center justify-center w-16 h-16 rounded-full border-2"
+                  className="self-end inline-flex items-center justify-center w-12 md:w-16 h-12 md:h-16 rounded-full border-2"
                   whileHover={{ x: [0, 6, 0] }}
                   transition={{ duration: 0.6, repeat: Infinity }}
                 >
@@ -97,11 +97,13 @@ const SustainabilitySection = () => {
                   className="object-cover group-hover:scale-105 transition-transform duration-500"
                 />
               </div>
-              <h3 className="text-lg font-medium text-gray-900 mb-2">
+              <h3 className="text-2xl font-medium text-[#1f1f1f] mb-2">
                 {item.title}
               </h3>
-              <p className="text-gray-600 mb-4">{item.description}</p>
-              <span className="text-blue-600 flex items-center gap-2 text-sm font-medium">
+              <p className="text-[#1f1f1f] mb-8 text-lg font-light">
+                {item.description}
+              </p>
+              <span className="text-blue-400 flex items-center gap-2 text-sm font-medium">
                 <motion.svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="16"

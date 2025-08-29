@@ -42,17 +42,17 @@ const DiscoverSlider = () => {
 
   return (
     <>
-      <section className="py-12 bg-gray-50">
+      <section className="py-16 md:py-24 bg-[#f2f2f2]">
         <div className="max-w-[1400px] mx-auto px-6">
-          <div className="p-18">
-            <p className="uppercase tracking-widest text-gray-500 text-sm mb-5">
+          <div className="px-0 md:px-16 pb-10 md:pb-16">
+            <p className="uppercase tracking-widest text-[#1f1f1f] text-sm mb-5">
               Discover Aramco
             </p>
-            <h2 className="text-[20px] font-light mb-[22px] max-w-[600px]">
+            <p className="text-[#1f1f1f] text-[24px] font-normal mb-[22px] max-w-[540px]">
               We are one of the leading producers of the energy and chemicals that
               drive global commerce and help enhance the lives of people around the
               globe.
-            </h2>
+            </p>
           </div>
 
           {/* Slider */}
@@ -72,7 +72,7 @@ const DiscoverSlider = () => {
               <SwiperSlide key={idx}>
                 <Link
                   href={item.href}
-                  className="group relative rounded-2xl overflow-hidden shadow-md h-[450px] flex mb-4"
+                  className="group relative rounded-2xl overflow-hidden shadow-md h-[470px] flex mb-4"
                 >
                   <Image
                     src={item.image}
@@ -88,7 +88,7 @@ const DiscoverSlider = () => {
                       <span className="block text-xs font-semibold tracking-widest text-white/80 mb-2">
                         {item.label}
                       </span>
-                      <h3 className="text-lg font-medium text-white leading-snug">
+                      <h3 className="text-xl font-normal text-white leading-snug">
                         {item.title}
                       </h3>
                     </div>

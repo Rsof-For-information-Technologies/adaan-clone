@@ -23,20 +23,20 @@ const data = [
 
 const MagazineSection = () => {
   return (
-    <section className="py-28 bg-white">
+    <section className="py-16 md:py-24 bg-white">
       <div className="max-w-[1260px] mx-auto px-6">
         {/* Heading */}
-        <div className="flex justify-between items-center mb-20">
-          <h2 className="text-3xl text-gray-900 max-w-[600px]">
+        <div className="flex flex-col md:flex-row justify-between items-end mb-12 md:mb-20">
+          <h2 className="text-[28px] md:text-[40px] font-normal text-[#1f1f1f] max-w-[600px]">
             Explore the latest from Elements magazine
           </h2>
-          <div className="text-blue-600 flex items-center gap-3 text-sm font-medium group ">
+          <div className="text-blue-400 flex items-center gap-3 text-sm font-medium group mt-5 md:mt-0">
             Visit the magazine
             <Link href={"#"} className="">
               <div className="flex flex-col justify-between items-center">
                 {/* Arrow */}
                 <motion.span
-                  className="self-end inline-flex items-center justify-center w-16 h-16 rounded-full border-2"
+                  className="self-end inline-flex items-center justify-center w-12 md:w-16 h-12 md:h-16 rounded-full border-2"
                   whileHover={{ x: [0, 6, 0] }}
                   transition={{ duration: 0.6, repeat: Infinity }}
                 >
@@ -78,8 +78,8 @@ const MagazineSection = () => {
                     className="object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                 </div>
-                <h3 className=" text-gray-900 my-4 text-[24px] font-light">{item.title}</h3>
-                <span className="text-blue-600 flex items-center gap-2 text-sm font-medium">
+                <h3 className="text-[#1f1f1f]  my-4 text-[24px] font-normal">{item.title}</h3>
+                <span className="text-blue-400 flex items-center gap-2 text-sm font-medium">
                   <motion.svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="16"
@@ -106,7 +106,7 @@ const MagazineSection = () => {
             href={data[2].href}
             className="group block lg:col-span-2"
           >
-            <div className="relative h-[200px] md:h-[712px] overflow-hidden rounded-t-[20px] rounded-l-[20px] mb-3">
+            <div className="relative h-[200px] md:h-[752px] overflow-hidden rounded-t-[20px] rounded-l-[20px] mb-3">
               <Image
                 src={data[2].image}
                 alt={data[2].title}
@@ -114,8 +114,8 @@ const MagazineSection = () => {
                 className="object-cover group-hover:scale-105 transition-transform duration-500"
               />
             </div>
-            <h3 className="text-gray-900 my-4 text-[24px] font-light">{data[2].title}</h3>
-            <span className="text-blue-600 flex items-center gap-2 text-sm font-medium">
+            <h3 className="text-[#1f1f1f]  my-4 text-[24px] font-normal">{data[2].title}</h3>
+            <span className="text-blue-400 flex items-center gap-2 text-sm font-medium">
               <motion.svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="16"

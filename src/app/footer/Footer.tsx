@@ -49,12 +49,12 @@ const Footer = () => {
 
     return (
         <footer className="bg-white border-t border-gray-200">
-            <div className="max-w-[1250px] mx-auto px-6 py-16">
+            <div className="max-w-[1260px] mx-auto py-14 px-6">
                 {/* Main Footer Content */}
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
                     {/* Quick Links */}
                     <div>
-                        <h3 className="text-xs font-bold text-gray-900 mb-6 uppercase tracking-widest">
+                        <h3 className="text-xs font-bold text-[#1f1f1f] mb-6 uppercase tracking-widest">
                             Quick Links
                         </h3>
                         <div className="grid grid-cols-2 gap-x-8 gap-y-3 md:grid-cols-1 md:gap-x-0 md:space-y-3">
@@ -62,7 +62,7 @@ const Footer = () => {
                                 <Link
                                     key={link.name}
                                     href={link.href}
-                                    className="block text-sm text-gray-700 hover:text-gray-900 transition-colors"
+                                    className="block text-sm text-gray-700 hover:text-[#1f1f1f] transition-colors"
                                 >
                                     {link.name}
                                 </Link>
@@ -72,7 +72,7 @@ const Footer = () => {
 
                     {/* Site Information */}
                     <div>
-                        <h3 className="text-xs font-bold text-gray-900 mb-6 uppercase tracking-widest">
+                        <h3 className="text-xs font-bold text-[#1f1f1f] mb-6 uppercase tracking-widest">
                             Site Information
                         </h3>
                         <div className="grid grid-cols-2 gap-x-8 gap-y-3 md:grid-cols-1 md:gap-x-0 md:space-y-3">
@@ -80,7 +80,7 @@ const Footer = () => {
                                 <Link
                                     key={link.name}
                                     href={link.href}
-                                    className="block text-sm text-gray-700 hover:text-gray-900 transition-colors"
+                                    className="block text-sm text-gray-700 hover:text-[#1f1f1f] transition-colors"
                                 >
                                     {link.name}
                                 </Link>
@@ -90,7 +90,7 @@ const Footer = () => {
 
                     {/* Other Websites */}
                     <div>
-                        <h3 className="text-xs font-bold text-gray-900 mb-6 uppercase tracking-widest">
+                        <h3 className="text-xs font-bold text-[#1f1f1f] mb-6 uppercase tracking-widest">
                             Other Websites
                         </h3>
                         <div className="grid grid-cols-2 gap-x-8 gap-y-3 md:grid-cols-1 md:gap-x-0 md:space-y-3">
@@ -100,7 +100,7 @@ const Footer = () => {
                                     href={link.href}
                                     target={link.external ? "_blank" : "_self"}
                                     rel={link.external ? "noopener noreferrer" : ""}
-                                    className="block text-sm text-gray-700 hover:text-gray-900 transition-colors"
+                                    className="block text-sm text-gray-700 hover:text-[#1f1f1f] transition-colors"
                                 >
                                     {link.name}
                                 </Link>
@@ -110,14 +110,14 @@ const Footer = () => {
 
                     {/* Social Media */}
                     <div className="flex justify-center md:justify-end">
-                        <div className="flex flex-row gap-4 md:grid md:grid-cols-2 md:gap-6 md:mt-10">
+                        <div className="flex flex-row gap-8 md:grid md:grid-cols-2 md:gap-4 md:mt-10">
                             {socialLinks.map((social, index) => (
                                 <Link
                                     key={social.name}
                                     href={social.href}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className={`w-12 h-12 md:w-14 md:h-14 rounded-full border border-gray-400 flex items-center justify-center text-gray-500 hover:text-gray-700 hover:border-gray-500 transition-colors ${index === 4 ? 'md:col-span-2 justify-center md:justify-self-end' : ''
+                                    className={`w-12 h-12 md:w-12 md:h-12 rounded-full border-2 border-[#1f1f1f] flex items-center justify-center text-[#1f1f1f] hover:text-blue-400 hover:border-blue-400 transition-colors ${index === 4 ? 'md:col-span-2 justify-center md:justify-self-end' : ''
                                         }`}
                                     aria-label={social.name}
                                 >
@@ -163,7 +163,7 @@ const Footer = () => {
                     <div className="flex flex-col items-center gap-8 md:flex-row md:justify-between md:items-center md:gap-0">
                         {/* Logo - Centered on mobile, right on desktop */}
                         <Link href="/" className="flex items-center gap-3 order-1 md:order-3">
-                            <div className="text-lg font-normal text-gray-900 lowercase">aramco</div>
+                            <div className="text-lg font-normal text-[#1f1f1f] lowercase">aramco</div>
                             <div className="w-5 h-5 bg-gradient-to-br from-green-500 to-blue-500 rounded-sm"></div>
                         </Link>
 
@@ -177,7 +177,7 @@ const Footer = () => {
                             {/* Back to Top Button */}
                             <motion.button
                                 onClick={scrollToTop}
-                                className="w-14 h-14 rounded-full border border-gray-400 flex items-center justify-center text-gray-500 hover:text-gray-700 hover:border-gray-500 transition-colors"
+                                className="w-12 h-12 rounded-full border border-gray-400 flex items-center justify-center text-gray-500 hover:text-gray-700 hover:border-gray-500 transition-colors"
                                 whileHover={{ scale: 1.05 }}
                                 whileTap={{ scale: 0.95 }}
                                 aria-label="Scroll to top"
@@ -198,7 +198,7 @@ const Footer = () => {
                             {/* Back to Top Button - Absolutely centered */}
                             <motion.button
                                 onClick={scrollToTop}
-                                className="w-14 h-14 rounded-full border border-gray-400 flex items-center justify-center text-gray-500 hover:text-gray-700 hover:border-gray-500 transition-colors absolute left-1/2 transform -translate-x-1/2"
+                                className="w-12 h-12 rounded-full border-2 border-[#1f1f1f] flex items-center justify-center text-[#1f1f1f] hover:text-blue-400 hover:border-blue-400 transition-colors absolute left-1/2 transform -translate-x-1/2"
                                 whileHover={{ scale: 1.05 }}
                                 whileTap={{ scale: 0.95 }}
                                 aria-label="Scroll to top"

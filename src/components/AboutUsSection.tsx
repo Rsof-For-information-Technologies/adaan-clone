@@ -6,7 +6,7 @@ import Link from "next/link";
 
 const AboutUsSection = () => {
     return (
-        <section className="relative h-[200px] lg:h-[250px] overflow-hidden mt-20">
+        <section className="relative h-[200px] lg:h-[250px] overflow-hidden">
             {/* Background Image */}
             <div className="absolute inset-0">
                 <Image

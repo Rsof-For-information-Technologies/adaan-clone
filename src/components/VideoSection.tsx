@@ -30,26 +30,26 @@ const VideoSection = () => {
     };
 
     return (
-        <section ref={containerRef} className="py-20 bg-white overflow-hidden">
-            <div className="max-w-[1400px] mx-auto px-8 lg:px-0">
+        <section ref={containerRef} className="py-16 md:py-24 bg-white overflow-hidden">
+            <div className="max-w-[1260px] mx-auto px-6">
                 {/* Heading */}
-                <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center mb-16 gap-6">
-                    <div className="px-24 py-8">
-                        <p className="uppercase tracking-wide text-sm text-gray-600 mb-2">
-                            Our history
-                        </p>
-                        <h2 className="text-3xl lg:text-4xl font-semibold text-gray-900 mb-4">
-                            Helping to power progress around the world
+                <div className="flex flex-col md:flex-row justify-between items-end mb-12 md:mb-20">
+                    <div className="">
+                        <h2 className="uppercase tracking-wider text-[#1f1f1f] text-sm mb-4">
+                            Our History
                         </h2>
+                        <p className="text-[28px] md:text-[40px] font-normal text-[#1f1f1f] max-w-[620px] mb-4 md:mb-0">
+                            Helping to power progress around the world
+                        </p>
                     </div>
 
-                    <div className="text-blue-600 flex items-center gap-3 text-sm font-medium group ">
-                        Visit the magazine
+                    <div className="text-blue-400 flex items-center gap-3 text-sm font-medium group ">
+                        Explore Aramco
                         <Link href={"#"} className="">
                             <div className="flex flex-col justify-between items-center">
                                 {/* Arrow */}
                                 <motion.span
-                                    className="self-end inline-flex items-center justify-center w-16 h-16 rounded-full border-2"
+                                    className="self-end inline-flex items-center justify-center w-12 md:w-16 h-12 md:h-16 rounded-full border-2"
                                     whileHover={{ x: [0, 6, 0] }}
                                     transition={{ duration: 0.6, repeat: Infinity }}
                                 >

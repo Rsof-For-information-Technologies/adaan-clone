@@ -34,22 +34,21 @@ const Header = () => {
                 transition={{ duration: 0.25 }}
                 className="backdrop-blur-sm"
             >
-                <div className="max-w-[1400px] mx-auto px-6 h-16 md:h-20 flex items-center justify-between text-white">
-                    <div className="flex flex-row gap-4 items-center">
+                <div className="max-w-[1400px] mx-auto px-6 h-16 md:h-18 flex items-center justify-between text-white">
+                    <div className="flex flex-row gap-12 items-center">
                         {/* Left: Search icon */}
                         <button
                             title="Search the website"
                             aria-label="Search the website"
-                            className="p-2 rounded-full hover:bg-white/10"
                         >
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25.98 25.98" focusable="false" className="chakra-icon css-12qnb82" aria-hidden="true" width="25.98" height="25.98"><path d="m17.5,11.25c0,3.45-2.8,6.25-6.25,6.25s-6.25-2.8-6.25-6.25,2.8-6.25,6.25-6.25,6.25,2.8,6.25,6.25Zm-2.44,0c0,2.11-1.71,3.81-3.81,3.81s-3.81-1.71-3.81-3.81,1.71-3.81,3.81-3.81,3.81,1.71,3.81,3.81Z" fillRule="evenodd" fill="#C0C0C0"/><path d="m11.25,22.5c2.64,0,5.07-.91,6.99-2.44l5.54,5.54c.5.5,1.32.5,1.82,0s.5-1.32,0-1.82l-5.54-5.54c1.52-1.92,2.44-4.35,2.44-6.99C22.5,5.04,17.46,0,11.25,0S0,5.04,0,11.25s5.04,11.25,11.25,11.25Zm0-2.44c4.87,0,8.81-3.95,8.81-8.81S16.12,2.44,11.25,2.44,2.44,6.38,2.44,11.25s3.95,8.81,8.81,8.81Z" fillRule="evenodd" fill="#C0C0C0"/></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" className="chakra-icon transition-colors duration-200 hover:text-blue-400 cursor-pointer" viewBox="0 0 25.98 25.98" focusable="false" aria-hidden="true" width="25.98" height="25.98"><path d="m17.5,11.25c0,3.45-2.8,6.25-6.25,6.25s-6.25-2.8-6.25-6.25,2.8-6.25,6.25-6.25,6.25,2.8,6.25,6.25Zm-2.44,0c0,2.11-1.71,3.81-3.81,3.81s-3.81-1.71-3.81-3.81,1.71-3.81,3.81-3.81,3.81,1.71,3.81,3.81Z" fillRule="evenodd" fill="currentColor"/><path d="m11.25,22.5c2.64,0,5.07-.91,6.99-2.44l5.54,5.54c.5.5,1.32.5,1.82,0s.5-1.32,0-1.82l-5.54-5.54c1.52-1.92,2.44-4.35,2.44-6.99C22.5,5.04,17.46,0,11.25,0S0,5.04,0,11.25s5.04,11.25,11.25,11.25Zm0-2.44c4.87,0,8.81-3.95,8.81-8.81S16.12,2.44,11.25,2.44,2.44,6.38,2.44,11.25s3.95,8.81,8.81,8.81Z" fillRule="evenodd" fill="currentColor"/></svg>
                         </button>
 
                         {/* Hamburger - mobile only */}
                         <button
                             type="button"
                             aria-label="Toggle menu"
-                            className="lg:hidden p-2 rounded-md hover:bg-white/10"
+                            className="lg:hidden p-2 rounded-md transition-all duration-200 hover:bg-white/15 hover:scale-105 active:scale-95"
                             onClick={() => setMobileOpen((v) => !v)}
                         >
                             {!mobileOpen ? (
@@ -70,7 +69,7 @@ const Header = () => {
                                     <li key={item.href}>
                                         <Link
                                             href={item.href}
-                                            className="uppercase tracking-wide text-sm font-semibold text-white/90 hover:text-white"
+                                            className="uppercase tracking-wide text-sm font-semibold text-white/90 transition-all duration-200 hover:text-blue-400 relative after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[0.3px] after:bg-blue-400 after:transition-all after:duration-400 hover:after:w-full"
                                         >
                                             {item.label}
                                         </Link>
@@ -81,10 +80,10 @@ const Header = () => {
                     </div>
 
                     {/* Right: Logo */}
-                    <Link href="/en" title="Aramco" className="shrink-0">
+                    <Link href="/en" title="Aramco" className="shrink-0 transition-transform duration-200 hover:scale-105">
                         <div className="flex items-center gap-2">
-                            <span className="text-2xl font-semibold tracking-tight">aramco</span>
-                            <span className="w-5 h-5 rounded-sm bg-gradient-to-br from-green-500 to-blue-500 inline-block" />
+                            <span className="text-2xl font-semibold tracking-tight transition-opacity duration-200 group-hover:opacity-90">aramco</span>
+                            <span className="w-5 h-5 rounded-sm bg-gradient-to-br from-green-500 to-blue-500 inline-block transition-all duration-300 hover:from-green-400 hover:to-blue-400 hover:shadow-lg" />
                         </div>
                     </Link>
                 </div>
@@ -101,7 +100,7 @@ const Header = () => {
                                 <li key={`m-${item.href}`}>
                                     <Link
                                         href={item.href}
-                                        className="block py-2 text-base font-medium text-white/90 hover:text-white"
+                                        className="block py-2 text-base font-medium text-white/90 transition-all duration-200 hover:text-white hover:translate-x-2"
                                         onClick={closeMobile}
                                     >
                                         {item.label}
