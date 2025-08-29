@@ -51,7 +51,18 @@ const data: SlideData[] = [
 
 const WhatWebelieveSection = () => {
   const [activeIndex, setActiveIndex] = useState(0);
+  const [hoveredCard, setHoveredCard] = useState<number | null>(null);
+  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const progress = ((activeIndex + 1) / data.length) * 100;
+
+  const handleMouseMove = (e: React.MouseEvent, idx: number) => {
+    const { currentTarget, clientX, clientY } = e;
+    const { left, top } = currentTarget.getBoundingClientRect();
+    setMousePosition({
+      x: clientX - left,
+      y: clientY - top
+    });
+  };
 
   return (
     <section className="py-16 md:py-24 bg-white">
@@ -91,7 +102,20 @@ const WhatWebelieveSection = () => {
             {data.map((item, idx) => (
               <SwiperSlide key={idx}>
                 <Link href={item.href} className="group block relative">
-                  <div className="relative h-[280px] overflow-hidden rounded-t-[20px] rounded-l-[20px] mt-8">
+                  <div
+                    className="relative h-[280px] overflow-hidden rounded-t-[20px] rounded-l-[20px] mt-8"
+                    onMouseMove={(e) => handleMouseMove(e, idx)}
+                    onMouseEnter={() => setHoveredCard(idx)}
+                    onMouseLeave={() => setHoveredCard(null)}
+                  >
+                    {hoveredCard === idx && (
+                      <motion.div
+                        className="pointer-events-none absolute w-20 h-20 rounded-full bg-white/20 shadow-lg z-50"
+                        animate={{ x: mousePosition.x - 40, y: mousePosition.y - 40, scale: 1.5, opacity: 0.3, }}
+                        initial={{ scale: 0, opacity: 0 }}
+                        transition={{ type: "spring", stiffness: 100, damping: 20, mass: 0.2, }}
+                      />
+                    )}
                     <Image
                       src={item.image}
                       alt={item.title}

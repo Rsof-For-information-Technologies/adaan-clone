@@ -35,7 +35,7 @@ const Header = () => {
                 className="backdrop-blur-sm"
             >
                 <div className="max-w-[1400px] mx-auto px-6 h-16 md:h-18 flex items-center justify-between text-white">
-                    <div className="flex flex-row gap-12 items-center">
+                    <div className="flex flex-row gap-4 items-center">
                         {/* Left: Search icon */}
                         <button
                             title="Search the website"

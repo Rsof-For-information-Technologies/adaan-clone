@@ -1,12 +1,10 @@
 "use client";
-import { motion } from "motion/react";
+import { motion } from "framer-motion";
 import Image from "next/image";
 import { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-
 import Link from "next/link";
 import "swiper/css";
-import { div } from "motion/react-client";
 
 const discoverData = [
   {
@@ -38,7 +36,18 @@ const discoverData = [
 
 const DiscoverSlider = () => {
   const [activeIndex, setActiveIndex] = useState(0);
+  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+  const [hoveredCard, setHoveredCard] = useState<number | null>(null);
   const progress = ((activeIndex + 1) / discoverData.length) * 100;
+
+  const handleMouseMove = (e: React.MouseEvent, idx: number) => {
+    const { currentTarget, clientX, clientY } = e;
+    const { left, top } = currentTarget.getBoundingClientRect();
+    setMousePosition({
+      x: clientX - left,
+      y: clientY - top,
+    });
+  };
 
   return (
     <>
@@ -49,9 +58,7 @@ const DiscoverSlider = () => {
               Discover Aramco
             </p>
             <p className="text-[#1f1f1f] text-[24px] font-normal mb-[22px] max-w-[540px]">
-              We are one of the leading producers of the energy and chemicals that
-              drive global commerce and help enhance the lives of people around the
-              globe.
+              We are one of the leading producers of the energy and chemicals that drive global commerce and help enhance the lives of people around the globe.
             </p>
           </div>
 
@@ -73,7 +80,18 @@ const DiscoverSlider = () => {
                 <Link
                   href={item.href}
                   className="group relative rounded-2xl overflow-hidden shadow-md h-[470px] flex mb-4"
+                  onMouseMove={(e) => handleMouseMove(e, idx)}
+                  onMouseEnter={() => setHoveredCard(idx)}
+                  onMouseLeave={() => setHoveredCard(null)}
                 >
+                  {hoveredCard === idx && (
+                    <motion.div
+                      className="pointer-events-none absolute w-40 h-40 rounded-full bg-white/30 backdrop-blur-sm z-50"
+                      animate={{ x: mousePosition.x - 48, y: mousePosition.y - 48, scale: 1.2, opacity: 0.3, }}
+                      initial={{ scale: 0, opacity: 0 }}
+                      transition={{ type: "spring", stiffness: 150, damping: 15, mass: 0.1, }}
+                    />
+                  )}
                   <Image
                     src={item.image}
                     alt={item.label}
@@ -94,10 +112,8 @@ const DiscoverSlider = () => {
                     </div>
 
                     {/* Arrow */}
-                    <motion.span
-                      className="self-end mt-4 inline-flex items-center justify-center w-9 h-9 rounded-full border border-white/80 bg-black/30 group-hover:bg-white/20"
-                    >
-                      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false" className="arrow-icon" > <path fillRule="evenodd" clipRule="evenodd" d="M14.4016 3.9304C13.9986 3.52743 13.3452 3.52743 12.9423 3.9304C12.5393 4.33337 12.5393 4.98671 12.9423 5.38968L18.5363 10.9837H2.93184C2.39455 10.9837 1.95898 11.4192 1.95898 11.9565C1.95898 12.4938 2.39455 12.9294 2.93184 12.9294H18.5362L12.9422 18.5233C12.5393 18.9263 12.5393 19.5796 12.9422 19.9826C13.3452 20.3856 13.9986 20.3856 14.4015 19.9826L21.6978 12.6863C21.8789 12.5052 21.9786 12.2736 21.9969 12.0368C22.0195 11.7466 21.9198 11.4486 21.6978 11.2267L14.4016 3.9304Z" fill="#FFFFFF" /> </svg>
+                    <motion.span className="self-end mt-4 inline-flex items-center justify-center w-9 h-9 rounded-full border border-white/80 bg-black/30 group-hover:bg-white/20">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false" className="arrow-icon" > {" "} <path fillRule="evenodd" clipRule="evenodd" d="M14.4016 3.9304C13.9986 3.52743 13.3452 3.52743 12.9423 3.9304C12.5393 4.33337 12.5393 4.98671 12.9423 5.38968L18.5363 10.9837H2.93184C2.39455 10.9837 1.95898 11.4192 1.95898 11.9565C1.95898 12.4938 2.39455 12.9294 2.93184 12.9294H18.5362L12.9422 18.5233C12.5393 18.9263 12.5393 19.5796 12.9422 19.9826C13.3452 20.3856 13.9986 20.3856 14.4015 19.9826L21.6978 12.6863C21.8789 12.5052 21.9786 12.2736 21.9969 12.0368C22.0195 11.7466 21.9198 11.4486 21.6978 11.2267L14.4016 3.9304Z" fill="#FFFFFF" />{" "} </svg>
                     </motion.span>
                   </div>
                 </Link>
