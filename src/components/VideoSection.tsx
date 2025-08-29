@@ -50,8 +50,6 @@ const VideoSection = () => {
                                 {/* Arrow */}
                                 <motion.span
                                     className="self-end inline-flex items-center justify-center w-12 md:w-16 h-12 md:h-16 rounded-full border-2"
-                                    whileHover={{ x: [0, 6, 0] }}
-                                    transition={{ duration: 0.6, repeat: Infinity }}
                                 >
                                     <svg
                                         xmlns="http://www.w3.org/2000/svg"
