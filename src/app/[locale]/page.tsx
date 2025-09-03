@@ -6,9 +6,9 @@ import HeroSlider from "@/components/HeroSlider";
 import VideoSection from "@/components/VideoSection";
 import WhatWebelieveSlider from "@/components/WhatWebelieveSection";
 import Header from "../header/Header";
-import { MagazineSection } from "@/components/MagazineSection";
-import { SustainabilitySection } from "@/components/SustainabilitySection";
-import { BlogsSection } from "@/components/BlogsSection";
+import { MagazineSection } from "@/components/magazineSection";
+import { SustainabilitySection } from "@/components/sustainabilitySection";
+import { BlogsSection } from "@/components/blogsSection";
 
 export default async function Home() {
 
