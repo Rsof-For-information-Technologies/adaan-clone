@@ -6,32 +6,73 @@ import { Swiper, SwiperSlide } from "swiper/react";
 
 import Link from "next/link";
 import "swiper/css";
+import { desc } from "motion/react-client";
 
 const data = [
   {
-    date: "News - August 14, 2025",
-    title: "Aramco signs $11 billion Jafurah midstream deal with international consortium led by Global Infrastructure Partners",
+    date: "2015",
+    title: "Establishing First Impressions",
+    description: "Addaan International Trading Company (AITC) was founded, embarking on a mission to revolutionize the mining sector with innovative solutions.",
     href: "#",
   },
   {
-    date: "News - August 14, 2025",
-    title: "Aramco announces second quarter and half-year 2025 results",
+    date: "2016",
+    title: "Market Analysis and Vision",
+    description: "Initiated market research to identify gaps in the mining industry, aligning efforts with Saudi Vision 2030 to drive growth and sustainability.",
     href: "#",
   },
   {
-    date: "News - August 14, 2025",
-    title: "Aramco announces completion of $5 billion bond issuance",
+    date: "2017",
+    title: "Strategic Partnerships",
+    description: "Secured partnerships with leading drilling brands and charted a clear roadmap to become a comprehensive provider of mining technology solutions.",
     href: "#",
   },
   {
-    date: "News - August 14, 2025",
-    title:
-      "Aramco achieves world-first by commissioning breakthrough renewable energy storage system for gas operations",
+    date: "2018",
+    title:"Smart Solutions",
+    description: "Formed a strategic alliance with IMDEX, delivering cutting-edge logging and data solutions for the mining and exploration industries.",
     href: "#",
   },
-    {
-    date: "News - August 14, 2025",
-    title: "From transportation fuels to advanced materials, innovation is key",
+  {
+    date: "2019",
+    title: "Resilience During COVID-19",
+    description: "Successfully navigated the challenges of the pandemic, maintaining robust business operations and delivering exceptional client support.",
+    href: "#",
+  },
+  {
+    date: "2020",
+    title: "Saudi-Made Innovations",
+    description: "Pioneered the first Saudi-made core boxes, reducing reliance on imports and championing local manufacturing in line with Vision 2030.",
+    href: "#",
+  },
+  {
+    date: "2021",
+    title: "Rapid Expansion",
+    description: "Expanded significantly, deploying over 18 DESCO rigs across Saudi Arabia, reinforcing AITC's position as a market leader.",
+    href: "#",
+  },
+  {
+    date: "2022",
+    title: "Core Tray Milestone",
+    description: "Achieved sales of more than 200,000 core trays nationwide, while focusing on product enhancements and raw material development.",
+    href: "#",
+  },
+  {
+    date: "2023",
+    title: "Record-Breaking Year",
+    description: "Celebrated the company's most successful year, setting new records in growth, client satisfaction, and industry impact.",
+    href: "#",
+  },
+  {
+    date: "2024",
+    title: "The Bronze Year",
+    description: "Surpassed 250,000 core boxes sold. Established Saudi Arabia's first IMDEX repair centre, enhancing service efficiency and strengthening client relationships.",
+    href: "#",
+  },
+  {
+    date: "2025",
+    title: "The Silver Year",
+    description: "Continuing a legacy of innovation and excellence with anticipated achievements in technology and market expansion.",
     href: "#",
   },
 ];
@@ -44,9 +85,17 @@ const BlogsSlider = () => {
     <section className="py-16 md:py-24 bg-[#f2f2f2]">
       <div className="max-w-[1400px] mx-auto px-6">
         <div className="flex flex-col md:flex-row justify-between items-end px-0 md:px-16 pb-10 md:pb-16">
-          <h2 className="text-[28px] md:text-[40px] font-normal text-[#1f1f1f] max-w-[600px]">
-            News from the world of Aramco
-          </h2>
+          <div>
+            <p className="uppercase tracking-widest text-[#1f1f1f] text-sm mb-5">
+              Our Journey
+            </p>
+            <h2 className="text-[28px] md:text-[40px] font-normal text-[#1f1f1f] max-w-[600px] mb-4">
+              Our Achievements
+            </h2>
+            <p className="text-[#1f1f1f] text-lg font-light mb-[22px] max-w-[600px]">
+              A decade of innovation and excellence in the mining industry
+            </p>
+          </div>
           <div className="text-blue-400 flex items-center gap-3 text-sm font-medium group mt-5 md:mt-0">
             Read All News
             <Link href={"#"} className="">
@@ -85,7 +134,7 @@ const BlogsSlider = () => {
           slidesPerView={1}
           spaceBetween={16}
           loop={false}
-          autoplay={false}
+          autoplay={true}
           onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
           breakpoints={{
             640: { slidesPerView: 2 },
@@ -107,6 +156,9 @@ const BlogsSlider = () => {
                     <h3 className="text-xl mt-4 font-normal text-[#1f1f1f] leading-snug">
                       {item.title}
                     </h3>
+                    <p className="text-[#1f1f1f] text-md font-light mt-4">
+                      {item.description}
+                    </p>
                   </div>
 
                   {/* Arrow */}

@@ -17,34 +17,53 @@ interface SlideData {
 
 const data: SlideData[] = [
   {
-    title: "We’re working to reduce our GHG emissions",
-    image: "https://images.pexels.com/photos/1002703/pexels-photo-1002703.jpeg",
+    title: "Proven Expertise",
+    image: "https://images.pexels.com/photos/2566850/pexels-photo-2566850.jpeg",
     href: "#",
   },
   {
-    title: "From transportation fuels to advanced materials, innovation is key",
-    image: "https://images.pexels.com/photos/3855961/pexels-photo-3855961.jpeg",
+    title: "Global Partnerships",
+    image: "https://images.pexels.com/photos/7792845/pexels-photo-7792845.jpeg",
     href: "#",
   },
   {
-    title: "Professional growth to make a positive impact",
-    image: "https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg",
+    title: "Local Manufacturing",
+    image: "https://images.pexels.com/photos/60008/brown-coal-energy-garzweiler-bucket-wheel-excavators-60008.jpeg",
     href: "#",
   },
   {
-    title:
-      "Aramco is one of the world’s largest integrated energy and chemicals companies",
-    image: "https://images.pexels.com/photos/669365/pexels-photo-669365.jpeg",
+    title: "Strategic Warehouse Facilities",
+    image: "https://images.pexels.com/photos/4483608/pexels-photo-4483608.jpeg",
     href: "#",
   },
   {
-    title: "From transportation fuels to advanced materials, innovation is key",
-    image: "https://images.pexels.com/photos/3855961/pexels-photo-3855961.jpeg",
+    title: "Balanced Approach",
+    image: "https://images.pexels.com/photos/26150937/pexels-photo-26150937.jpeg",
     href: "#",
   },
   {
-    title: "Professional growth to make a positive impact",
-    image: "https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg",
+    title: "Vision 2030 Aligned",
+    image: "https://images.pexels.com/photos/4057662/pexels-photo-4057662.jpeg",
+    href: "#",
+  },
+  {
+    title: "Tailored Mining Solutions",
+    image: "https://images.pexels.com/photos/15970027/pexels-photo-15970027.jpeg",
+    href: "#",
+  },
+  {
+    title: "One-Stop Provider",
+    image: "https://images.pexels.com/photos/15109992/pexels-photo-15109992.jpeg",
+    href: "#",
+  },
+  {
+    title: "High Safety & Quality Standards",
+    image: "https://images.pexels.com/photos/10951145/pexels-photo-10951145.jpeg",
+    href: "#",
+  },
+  {
+    title: "Comprehensive Support",
+    image: "https://images.pexels.com/photos/8866753/pexels-photo-8866753.jpeg",
     href: "#",
   },
 ];
@@ -68,13 +87,12 @@ const WhatWebelieveSection = () => {
     <section className="py-16 md:py-24 bg-white">
       <div className="max-w-[1400px] mx-auto px-6">
         <div className="px-0 md:px-16 pb-10 md:pb-16">
-          <h2 className="uppercase tracking-wider text-[#1f1f1f] text-sm mb-4">
-            WHAT WE BELIEVE
-          </h2>
-          <p className="text-2xl font-normal text-[#1f1f1f] mb-[22px] max-w-[600px]">
-            We believe in the power of energy to help transform lives, enhance
-            communities, and advance human progress.
+          <p className="uppercase tracking-widest text-[#1f1f1f] text-sm mb-5">
+            Why Choose AITC?
           </p>
+          <h2 className="text-[28px] md:text-[40px] font-normal text-[#1f1f1f] max-w-[600px] mb-4">
+            Addaan International Trading Company
+          </h2>
         </div>
 
         {/* Slider */}

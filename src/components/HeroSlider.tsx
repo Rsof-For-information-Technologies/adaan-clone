@@ -10,7 +10,6 @@ import type { SwiperRef } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/effect-fade';
 import 'swiper/css/navigation';
-import AnnouncementBar from '@/app/header/component/announcementBar';
 
 const HeroSlider = () => {
     const [activeIndex, setActiveIndex] = useState(0);
@@ -27,15 +26,15 @@ const HeroSlider = () => {
     const slides = [
         {
             id: 1,
-            image: 'https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg',
-            title: 'The Birth of Oil and a Kingdom',
-            description: 'The Birth of Oil and a Kingdom',
-            buttonText: 'Launch the experience',
-            thumbTitle: 'Our History'
+            image: 'https://images.pexels.com/photos/31498921/pexels-photo-31498921.jpeg',
+            title: 'Adaan Mining – Durable, Saudi-Made Solutions',
+            description: 'Partnering with Global Leaders, Empowering Saudi Mining',
+            buttonText: 'Explore More',
+            thumbTitle: 'Adaan Mining'
         },
         {
             id: 2,
-            image: 'https://images.pexels.com/photos/1261728/pexels-photo-1261728.jpeg',
+            image: 'https://images.pexels.com/photos/4993793/pexels-photo-4993793.jpeg',
             title: 'How can we help to engineer a better future for everyone?',
             description: 'Dive into the deep blue and discover the mysteries of the underwater world.',
             buttonText: 'Discover how',
@@ -43,21 +42,22 @@ const HeroSlider = () => {
         },
         {
             id: 3,
-            image: 'https://images.pexels.com/photos/1054218/pexels-photo-1054218.jpeg',
-            title: 'How Aramco is progressing toward a circular economy',
+            image: 'https://images.pexels.com/photos/10410019/pexels-photo-10410019.jpeg',
+            title: 'How Adaan is progressing toward a circular economy',
             description: 'Experience the vastness and beauty of desert landscapes under the golden sun.',
             buttonText: 'Read more',
             thumbTitle: 'Elements magazine'
         },
         {
             id: 4,
-            image: 'https://images.pexels.com/photos/1671325/pexels-photo-1671325.jpeg',
-            title: 'Saudi Aramco published its half-year 2025 results on August 5, 2025.',
+            image: 'https://images.pexels.com/photos/27852910/pexels-photo-27852910.jpeg',
+            title: 'Saudi Adaan published its half-year 2025 results on August 5, 2025.',
             description: 'Witness the spectacular dance of the northern lights in the Arctic sky.',
             buttonText: 'Learn More',
             thumbTitle: 'Results announcement'
         },
     ];
+
 
     // Start progress bar animation
     useEffect(() => {
@@ -153,7 +153,6 @@ const HeroSlider = () => {
     return (
         <>
             <div className="relative h-screen w-full overflow-hidden">
-                {/* <AnnouncementBar /> */}
                 {/* Main Swiper */}
                 <Swiper
                     ref={mainSwiperRef}
@@ -164,11 +163,11 @@ const HeroSlider = () => {
                     autoplay={{
                         delay: 6000,
                         disableOnInteraction: false,
-                        waitForTransition: false // Reduce delay between slides
+                        waitForTransition: false
                     }}
                     onSlideChange={(swiper) => {
                         setActiveIndex(swiper.realIndex);
-                        setProgress(0); // Reset progress on slide change
+                        setProgress(0);
                     }}
                     className="h-full w-full"
                 >

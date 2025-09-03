@@ -3,14 +3,14 @@ import Link from "next/link";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import { motion } from "motion/react";
+import AnnouncementBar from "./component/announcementBar";
 
 const navItems = [
-    { label: "About us", href: "/en/about-us" },
-    { label: "What we do", href: "/en/what-we-do" },
-    { label: "Sustainability", href: "/en/sustainability" },
-    { label: "Investors", href: "/en/investors" },
-    { label: "News & Media", href: "/en/news-media" },
-    { label: "Careers", href: "/en/careers" },
+    { label: "HOME", href: "/en/about-us" },
+    { label: "ABOUT US", href: "/en/what-we-do" },
+    { label: "PRODUCTS", href: "/en/sustainability" },
+    { label: "CONTACT", href: "/en/investors" },
+    { label: "ACHIEVEMENTS", href: "/en/news-media" },
 ];
 
 const Header = () => {
@@ -28,18 +28,24 @@ const Header = () => {
 
     return (
         <header className="fixed inset-x-0 z-50">
+            <motion.div
+                animate={{ height: scrolled ? 0 : "auto", opacity: scrolled ? 0 : 1 }}
+                transition={{ duration: 0.25 }}
+                >
+                <AnnouncementBar />
+            </motion.div>
             {/* Main sticky header */}
             <motion.div
                 animate={{ backgroundColor: scrolled ? "rgba(34, 34, 34, 1)" : "rgba(0, 0, 0, 0)" }}
                 transition={{ duration: 0.25 }}
-                className="backdrop-blur-sm"
             >
-                <div className="max-w-[1400px] mx-auto px-6 h-16 md:h-18 flex items-center justify-between text-white">
-                    <div className="flex flex-row gap-4 items-center">
+                <div className="max-w-[1400px] mx-auto px-6 h-18 md:h-24 flex items-center justify-between text-white">
+                    <div className="flex flex-row gap-4 md:gap-10 items-center">
                         {/* Left: Search icon */}
                         <button
                             title="Search the website"
                             aria-label="Search the website"
+                            className="hidden lg:block"
                         >
                             <svg xmlns="http://www.w3.org/2000/svg" className="chakra-icon transition-colors duration-200 hover:text-blue-400 cursor-pointer" viewBox="0 0 25.98 25.98" focusable="false" aria-hidden="true" width="25.98" height="25.98"><path d="m17.5,11.25c0,3.45-2.8,6.25-6.25,6.25s-6.25-2.8-6.25-6.25,2.8-6.25,6.25-6.25,6.25,2.8,6.25,6.25Zm-2.44,0c0,2.11-1.71,3.81-3.81,3.81s-3.81-1.71-3.81-3.81,1.71-3.81,3.81-3.81,3.81,1.71,3.81,3.81Z" fillRule="evenodd" fill="currentColor"/><path d="m11.25,22.5c2.64,0,5.07-.91,6.99-2.44l5.54,5.54c.5.5,1.32.5,1.82,0s.5-1.32,0-1.82l-5.54-5.54c1.52-1.92,2.44-4.35,2.44-6.99C22.5,5.04,17.46,0,11.25,0S0,5.04,0,11.25s5.04,11.25,11.25,11.25Zm0-2.44c4.87,0,8.81-3.95,8.81-8.81S16.12,2.44,11.25,2.44,2.44,6.38,2.44,11.25s3.95,8.81,8.81,8.81Z" fillRule="evenodd" fill="currentColor"/></svg>
                         </button>
@@ -52,11 +58,11 @@ const Header = () => {
                             onClick={() => setMobileOpen((v) => !v)}
                         >
                             {!mobileOpen ? (
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="currentColor" aria-hidden>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="30" height="30" fill="currentColor" aria-hidden>
                                     <path d="M3 6h18v2H3V6zm0 5h18v2H3v-2zm0 5h18v2H3v-2z" />
                                 </svg>
                             ) : (
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="currentColor" aria-hidden>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="30" height="30" fill="currentColor" aria-hidden>
                                     <path d="M18.3 5.7L12 12l6.3 6.3-1.4 1.4L10.6 13.4 4.3 19.7 2.9 18.3 9.2 12 2.9 5.7 4.3 4.3 10.6 10.6 16.9 4.3z" />
                                 </svg>
                             )}
@@ -80,11 +86,14 @@ const Header = () => {
                     </div>
 
                     {/* Right: Logo */}
-                    <Link href="/en" title="Aramco" className="shrink-0 transition-transform duration-200 hover:scale-105">
-                        <div className="flex items-center gap-2">
-                            <span className="text-2xl font-semibold tracking-tight transition-opacity duration-200 group-hover:opacity-90">aramco</span>
-                            <span className="w-5 h-5 rounded-sm bg-gradient-to-br from-green-500 to-blue-500 inline-block transition-all duration-300 hover:from-green-400 hover:to-blue-400 hover:shadow-lg" />
-                        </div>
+                    <Link href={"/"} className="flex items-center">
+                        <Image
+                            width={100}
+                            height={100}
+                            src="/images/aitc-logo.png"
+                            alt="AITC - Addaan International Trading Company"
+                            className="h-16 w-auto md:h-20 rounded-2xl"
+                        />
                     </Link>
                 </div>
 
@@ -92,22 +101,50 @@ const Header = () => {
                 <motion.div
                     initial={false}
                     animate={{ height: mobileOpen ? "auto" : 0, opacity: mobileOpen ? 1 : 0 }}
-                    className="lg:hidden overflow-hidden bg-black/85 text-white"
+                    className="lg:hidden overflow-hidden bg-[#222222] text-white backdrop-blur-sm"
                 >
-                    <div className="max-w-[1400px] mx-auto px-6 py-4">
-                        <ul className="flex flex-col gap-4">
-                            {navItems.map((item) => (
-                                <li key={`m-${item.href}`}>
-                                    <Link
-                                        href={item.href}
-                                        className="block py-2 text-base font-medium text-white/90 transition-all duration-200 hover:text-white hover:translate-x-2"
-                                        onClick={closeMobile}
-                                    >
-                                        {item.label}
-                                    </Link>
-                                </li>
-                            ))}
-                        </ul>
+                    <div className="flex flex-col px-6 py-8 h-screen gap-40">
+                        <div className="flex flex-col gap-6">
+                            {/* Search Bar */}
+                            <div className="relative mb-8">
+                                <input
+                                    type="search"
+                                    placeholder="Search"
+                                    className="w-full bg-transparent border-b border-white/20 py-2 pl-10 pr-4 text-white placeholder-white/50 focus:outline-none focus:border-white/40"
+                                />
+                                <svg xmlns="http://www.w3.org/2000/svg" className="chakra-icon transition-colors duration-200 hover:text-blue-400 cursor-pointer absolute top-[9px]" viewBox="0 0 25.98 25.98" focusable="false" aria-hidden="true" width="20" height="20"><path d="m17.5,11.25c0,3.45-2.8,6.25-6.25,6.25s-6.25-2.8-6.25-6.25,2.8-6.25,6.25-6.25,6.25,2.8,6.25,6.25Zm-2.44,0c0,2.11-1.71,3.81-3.81,3.81s-3.81-1.71-3.81-3.81,1.71-3.81,3.81-3.81,3.81,1.71,3.81,3.81Z" fillRule="evenodd" fill="currentColor"/><path d="m11.25,22.5c2.64,0,5.07-.91,6.99-2.44l5.54,5.54c.5.5,1.32.5,1.82,0s.5-1.32,0-1.82l-5.54-5.54c1.52-1.92,2.44-4.35,2.44-6.99C22.5,5.04,17.46,0,11.25,0S0,5.04,0,11.25s5.04,11.25,11.25,11.25Zm0-2.44c4.87,0,8.81-3.95,8.81-8.81S16.12,2.44,11.25,2.44,2.44,6.38,2.44,11.25s3.95,8.81,8.81,8.81Z" fillRule="evenodd" fill="currentColor"/></svg>
+                            </div>
+                            {/* Navigation Links */}
+                            <nav className="mb-8">
+                                <ul className="flex flex-col gap-6">
+                                    {navItems.map((item) => (
+                                        <li key={`m-${item.href}`}>
+                                            <Link
+                                                href={item.href}
+                                                className="group flex items-center justify-between py-2 text-lg font-medium text-white/90 transition-all duration-200 hover:text-white"
+                                                onClick={closeMobile}
+                                            >
+                                                {item.label}
+                                                <motion.svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" className="text-white/50 group-hover:text-white group-hover:translate-x-1 transition-all duration-200" >
+                                                    <path d="M14.4016 3.9304L21.6978 11.2267C21.9198 11.4486 22.0195 11.7466 21.9969 12.0368L21.6978 12.6863L14.4015 19.9826C13.9986 20.3856 13.3452 20.3856 12.9422 19.9826C12.5393 19.5796 12.5393 18.9263 12.9422 18.5233L18.5362 12.9294H2.93184C2.39455 12.9294 1.95898 12.4938 1.95898 11.9565C1.95898 11.4192 2.39455 10.9837 2.93184 10.9837H18.5363L12.9423 5.38968C12.5393 4.98671 12.5393 4.33337 12.9423 3.9304C13.3452 3.52743 13.9986 3.52743 14.4016 3.9304Z" fill="currentColor" />
+                                                </motion.svg>
+                                            </Link>
+                                        </li>
+                                    ))}
+                                </ul>
+                            </nav>
+                            {/* Language Selection */}
+                            <div className="flex items-center justify-between pt-8 border-t border-white/10">
+                                <div className="flex items-center gap-4">
+                                    <Link href="/ar" className="text-sm font-medium text-white/70 hover:text-white transition-colors">العربية</Link>
+                                    <span className="text-white/30">|</span>
+                                    <Link href="/en" className="text-sm font-medium text-white hover:text-white/70 transition-colors">English</Link>
+                                </div>
+                                <Link href="/global-contacts" className="text-sm font-medium text-white/70 hover:text-white transition-colors">
+                                    Global contacts
+                                </Link>
+                            </div>
+                        </div>
                     </div>
                 </motion.div>
             </motion.div>

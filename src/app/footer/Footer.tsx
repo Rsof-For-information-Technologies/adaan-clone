@@ -9,42 +9,33 @@ const Footer = () => {
     };
 
     const quickLinks = [
-        { name: "Careers", href: "/en/careers" },
-        { name: "Investors", href: "/en/investors" },
-        { name: "Suppliers", href: "/en/what-we-do/suppliers" },
-        { name: "Customers", href: "/en/what-we-do/customers" },
-        { name: "E-Services login", href: "https://login.aramco.com/vpn/tmindex.html" },
-        { name: "Latest news", href: "/en/news-media/news" },
-        { name: "Auditor hotline", href: "/en/what-we-do/suppliers/general-auditor-hotline" },
-        { name: "Global contacts", href: "/en/global-contacts" },
+        { name: "About Us", href: "/en/aboutUs" },
+        { name: "Products", href: "/en/products" },
+        { name: "Team", href: "/en/team" },
+        { name: "Contact", href: "/en/contact" },
+        { name: "Achievements", href: "https://login.Adaan.com/vpn/tmindex.html" },
     ];
 
-    const siteInformation = [
-        { name: "Cookie consent", href: "/en#cookie-consent" },
-        { name: "Cookie notices", href: "/en/cookie-notices" },
-        { name: "Scam and fraud alert", href: "/en/scam-and-fraud" },
-        { name: "Terms and conditions", href: "/en/terms-and-conditions" },
-        { name: "Privacy notice", href: "/en/privacy-notice" },
-        { name: "Disclaimers", href: "/en/disclaimers" },
-        { name: "Accessibility", href: "/en/accessibility" },
-        { name: "Sitemap", href: "/en/sitemap" },
+    const ourProducts = [
+        { name: "AITC Core Trays", href: "/en#cookie-consent" },
+        { name: "IMDEX Solutions", href: "/en/cookie-notices" },
+        { name: "DESCO Drilling Rigs", href: "/en/scam-and-fraud" },
+        { name: "CR Powered by Epiroc", href: "/en/terms-and-conditions" },
+        { name: "Drilling Tools", href: "/en/privacy-notice" },
     ];
 
     const otherWebsites = [
-        { name: "Aramco Trading Company", href: "https://aramcotrading.com/", external: true },
-        { name: "Aramco Ventures", href: "https://aramcoventures.com/", external: true },
-        { name: "IKTVA", href: "https://iktva.sa", external: true },
-        { name: "Taleed", href: "https://aramcotaleed.com", external: true },
-        { name: "Wa'ed Ventures", href: "https://www.waed.net/", external: true },
-        { name: "King Abdulaziz Center for World Culture — Ithra", href: "https://www.ithra.com/en/", external: true },
+        { name: "IMDEX", href: "https://www.imdex.com", external: true },
+        { name: "CR Powered by Epiroc", href: "https://crmining.com", external: true },
+        { name: "Desco Drilling", href: "https://gtd-desco.com", external: true },
     ];
 
     const socialLinks = [
-        { name: "Twitter", href: "https://x.com/aramco", icon: "twitter" },
-        { name: "Facebook", href: "https://www.facebook.com/aramco", icon: "facebook" },
-        { name: "LinkedIn", href: "https://www.linkedin.com/company/aramco/", icon: "linkedin" },
-        { name: "Instagram", href: "https://www.instagram.com/aramco/", icon: "instagram" },
-        { name: "YouTube", href: "https://www.youtube.com/user/AramcoVideo", icon: "youtube" },
+        { name: "Twitter", href: "https://x.com/Adaan", icon: "twitter" },
+        { name: "Facebook", href: "https://www.facebook.com/Adaan", icon: "facebook" },
+        { name: "LinkedIn", href: "https://www.linkedin.com/company/Adaan/", icon: "linkedin" },
+        { name: "Instagram", href: "https://www.instagram.com/Adaan/", icon: "instagram" },
+        { name: "YouTube", href: "https://www.youtube.com/user/AdaanVideo", icon: "youtube" },
     ];
 
     return (
@@ -73,10 +64,10 @@ const Footer = () => {
                     {/* Site Information */}
                     <div>
                         <h3 className="text-xs font-bold text-[#1f1f1f] mb-6 uppercase tracking-widest">
-                            Site Information
+                            Our Products
                         </h3>
                         <div className="grid grid-cols-2 gap-x-8 gap-y-3 md:grid-cols-1 md:gap-x-0 md:space-y-3">
-                            {siteInformation.map((link) => (
+                            {ourProducts.map((link) => (
                                 <Link
                                     key={link.name}
                                     href={link.href}
@@ -163,8 +154,13 @@ const Footer = () => {
                     <div className="flex flex-col items-center gap-8 md:flex-row md:justify-between md:items-center md:gap-0">
                         {/* Logo - Centered on mobile, right on desktop */}
                         <Link href="/" className="flex items-center gap-3 order-1 md:order-3">
-                            <div className="text-lg font-normal text-[#1f1f1f] lowercase">aramco</div>
-                            <div className="w-5 h-5 bg-gradient-to-br from-green-500 to-blue-500 rounded-sm"></div>
+                            <Image
+                            width={100}
+                            height={100}
+                            src="/images/aitc-logo.png"
+                            alt="AITC - Addaan International Trading Company"
+                            className="h-16 w-auto md:h-20 transition-all duration-300 rounded-md"
+                            />
                         </Link>
 
                         {/* Bottom row for mobile, separate elements for desktop */}

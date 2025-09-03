@@ -8,28 +8,27 @@ import "swiper/css";
 
 const discoverData = [
   {
-    label: "SUSTAINABILITY",
-    title: "We’re working to reduce our GHG emissions",
-    image: "https://images.pexels.com/photos/1002703/pexels-photo-1002703.jpeg",
+    label: "Our Mission",
+    title: "Deliver cutting-edge mining solutions that drive efficiency, sustainability, and industrial growth in alignment with Saudi Vision 2030.",
+    image: "https://images.pexels.com/photos/12654946/pexels-photo-12654946.jpeg",
     href: "#",
   },
   {
-    label: "WHAT WE DO",
-    title: "From transportation fuels to advanced materials, innovation is key",
-    image: "https://images.pexels.com/photos/3855961/pexels-photo-3855961.jpeg",
+    label: "Our Vision",
+    title: "To lead the mining sector in technology, sustainability, and local manufacturing.",
+    image: "https://images.pexels.com/photos/2603464/pexels-photo-2603464.jpeg",
     href: "#",
   },
   {
-    label: "CAREERS",
-    title: "Professional growth to make a positive impact",
-    image: "https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg",
+    label: "Years Experience",
+    title: "9+ Years Experience",
+    image: "https://images.pexels.com/photos/5816299/pexels-photo-5816299.jpeg",
     href: "#",
   },
   {
-    label: "INVESTORS",
-    title:
-      "Aramco is one of the world’s largest integrated energy and chemicals companies",
-    image: "https://images.pexels.com/photos/669365/pexels-photo-669365.jpeg",
+    label: "Core Boxes Sold",
+    title: "250K+ Core Boxes Sold",
+    image: "https://images.pexels.com/photos/7642006/pexels-photo-7642006.jpeg",
     href: "#",
   },
 ];
@@ -55,10 +54,13 @@ const DiscoverSlider = () => {
         <div className="max-w-[1400px] mx-auto px-6">
           <div className="px-0 md:px-16 pb-10 md:pb-16">
             <p className="uppercase tracking-widest text-[#1f1f1f] text-sm mb-5">
-              Discover Aramco
+              About AITC
             </p>
-            <p className="text-[#1f1f1f] text-[24px] font-normal mb-[22px] max-w-[540px]">
-              We are one of the leading producers of the energy and chemicals that drive global commerce and help enhance the lives of people around the globe.
+            <h2 className="text-[28px] md:text-[40px] font-normal text-[#1f1f1f] max-w-[600px] mb-4">
+                Partnering with Global Leaders, Empowering Saudi Mining
+            </h2>
+            <p className="text-[#1f1f1f] text-[20px] font-normal mb-[22px] max-w-[740px]">
+              Founded in 2015, Addaan International Trading Company (AITC) is a leading provider of mining and exploration solutions in Saudi Arabia. We combine local manufacturing expertise with strong global partnerships to deliver innovative, high-quality products and technical services tailored to the mining industry.
             </p>
           </div>
 

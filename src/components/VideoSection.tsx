@@ -14,7 +14,7 @@ const VideoSection = () => {
     });
 
       // Transform scroll progress to scale the video - stop at 100% width
-  const videoScale = useTransform(scrollYProgress, [0, 0.6], [0.5, 1.04]);
+  const videoScale = useTransform(scrollYProgress, [0, 0.6], [0.5, 1.0]);
     const videoOpacity = useTransform(scrollYProgress, [0, 0.5, 1], [0.3, 1, 1]);
 
     const handlePlayPause = () => {
@@ -44,7 +44,7 @@ const VideoSection = () => {
                     </div>
 
                     <div className="text-blue-400 flex items-center gap-3 text-sm font-medium group ">
-                        Explore Aramco
+                        Explore Adaan
                         <Link href={"#"} className="">
                             <div className="flex flex-col justify-between items-center">
                                 {/* Arrow */}
@@ -78,7 +78,7 @@ const VideoSection = () => {
             <div className="relative">
                 <motion.div
                     style={{ scale: videoScale, opacity: videoOpacity }}
-                    className="relative rounded-2xl overflow-hidden shadow-2xl"
+                    className="relative rounded-t-[20px] rounded-l-[20px] overflow-hidden shadow-2xl"
                 >
                     {/* Video Container */}
                     <div className="relative aspect-video bg-gray-900">
