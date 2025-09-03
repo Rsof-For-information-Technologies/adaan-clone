@@ -21,7 +21,7 @@ const data = [
   },
 ];
 
-const MagazineSection = () => {
+export const MagazineSection = () => {
   return (
     <section className="py-16 md:py-24 bg-white">
       <div className="max-w-[1260px] mx-auto px-6">
@@ -137,5 +137,3 @@ const MagazineSection = () => {
     </section>
   );
 };
-
-export default MagazineSection;

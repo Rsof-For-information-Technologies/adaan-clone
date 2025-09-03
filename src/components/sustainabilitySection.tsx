@@ -106,7 +106,7 @@ const data = [
   },
 ];
 
-const SustainabilitySection = () => {
+export const SustainabilitySection = () => {
   return (
     <section className="py-16 md:py-24 bg-white">
       <div className="max-w-[1250px] mx-auto px-6">
@@ -208,5 +208,3 @@ const SustainabilitySection = () => {
     </section>
   );
 };
-
-export default SustainabilitySection;

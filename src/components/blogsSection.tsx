@@ -75,7 +75,7 @@ const data = [
   },
 ];
 
-const BlogsSlider = () => {
+export const BlogsSection = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   const progress = ((activeIndex + 1) / data.length) * 100;
 
@@ -183,5 +183,3 @@ const BlogsSlider = () => {
     </section>
   );
 };
-
-export default BlogsSlider;
