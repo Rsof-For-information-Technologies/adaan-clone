@@ -1,12 +1,10 @@
 "use client";
 import { motion } from "motion/react";
+import Link from "next/link";
 import { useState } from "react";
+import "swiper/css";
 import { Autoplay } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
-
-import Link from "next/link";
-import "swiper/css";
-import { desc } from "motion/react-client";
 
 const data = [
   {

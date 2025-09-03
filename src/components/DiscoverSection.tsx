@@ -1,10 +1,10 @@
 "use client";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { useState } from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
 import Link from "next/link";
+import { useState } from "react";
 import "swiper/css";
+import { Swiper, SwiperSlide } from "swiper/react";
 
 const discoverData = [
   {
