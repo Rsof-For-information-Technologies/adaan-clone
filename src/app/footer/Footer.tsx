@@ -188,7 +188,7 @@ const Footer = () => {
                         <div className="hidden md:flex md:flex-row md:items-center md:w-full md:relative">
                             {/* Copyright */}
                             <p className="text-sm text-gray-700">
-                                © 2025 Saudi Arabian Oil Co.
+                                © 2025 Adaan.
                             </p>
 
                             {/* Back to Top Button - Absolutely centered */}
