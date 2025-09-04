@@ -21,7 +21,7 @@ export default async function Home() {
       <MagazineSection />
       <SustainabilitySection />
       <BlogsSection />
-      <ContentKeyFactsText />
+      {/* <ContentKeyFactsText /> */}
       <VideoSection />
       <AboutUsSection />
       <Footer />
