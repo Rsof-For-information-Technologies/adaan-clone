@@ -1,0 +1,425 @@
+{
+    "Products": {
+        "header": {
+            "title": "Products & Partners",
+            "heading": "Comprehensive Mining Solutions",
+            "description": "Advanced technologies and equipment for modern mining operations, delivering precision, efficiency, and reliability"
+        },
+        "common": {
+            "learnMore": "Learn More",
+            "keyFeatures": "Key Features"
+        },
+        "coreTrays": {
+            "flagshipProduct": "Flagship Product",
+            "title": "AITC Core Trays",
+            "subtitle": "Saudi Made Excellence - Locally manufactured in our state-of-the-art Rabigh facility • Supporting Vision 2030",
+            "exploreButton": "Explore Saudi Manufacturing Excellence",
+            "stats": {
+                "coreBoxes": {
+                    "number": "250,000+",
+                    "label": "Core Boxes Sold"
+                },
+                "saudiMade": {
+                    "number": "100%",
+                    "label": "Saudi Made"
+                },
+                "vision": {
+                    "number": "2030",
+                    "label": "Vision Aligned"
+                }
+            },
+            "highlights": [
+                {
+                    "key": "coreBoxes",
+                    "label": "Core Boxes Sold",
+                    "icon": "Package"
+                },
+                {
+                    "key": "saudiMade",
+                    "label": "Saudi Made",
+                    "icon": "Shield"
+                },
+                {
+                    "key": "vision",
+                    "label": "Vision Aligned",
+                    "icon": "Users"
+                }
+            ]
+        }
+    },
+    "HomePage": {
+        "title": "My Application",
+        "description": "This is my application"
+    },
+    "AnnouncementBar": {
+        "region": {
+            "select": "Select region",
+            "current": "You are in Adaan Global"
+        },
+        "language": {
+            "arabic": "العربية",
+            "english": "English"
+        },
+        "globalContacts": "Global contacts"
+    },
+    "Header": {
+        "navItems": {
+            "home": "HOME",
+            "aboutUs": "ABOUT US",
+            "products": "PRODUCTS",
+            "contact": "CONTACT",
+            "achievements": "ACHIEVEMENTS"
+        },
+        "search": {
+            "title": "Search the website",
+            "placeholder": "Search"
+        },
+        "menu": {
+            "toggle": "Toggle menu"
+        },
+        "logo": {
+            "alt": "AITC - Addaan International Trading Company"
+        },
+        "language": {
+            "arabic": "العربية",
+            "english": "English"
+        },
+        "globalContacts": "Global contacts"
+    },
+    "AboutPage": {
+        "title": "About AITC",
+        "heading": "Partnering with Global Leaders, Empowering Saudi Mining",
+        "description": {
+            "paragraph1": "Founded in 2015, Addaan International Trading Company (AITC) is a leading provider of mining and exploration solutions in Saudi Arabia. We combine local manufacturing expertise with strong global partnerships to deliver innovative, high-quality products and technical services.",
+            "paragraph2": "Starting as the sole agent for Desco rigs in 2017, and later expanding with IMDEX and CR Mining, we continue to pioneer industry-first solutions.",
+            "paragraph3": "Our locally manufactured core trays, approved by Ma'aden, reflect our alignment with Saudi Vision 2030 and commitment to local content development."
+        },
+        "features": {
+            "0": "Nearly a decade of leadership in mining solutions",
+            "1": "Global partnerships with IMDEX, CR Powered by Epiroc, and Desco",
+            "2": "State-of-the-art Rabigh facility producing core trays",
+            "3": "Tailored solutions maximizing operational success",
+            "4": "Saudi Vision 2030 alignment",
+            "5": "Local manufacturing expertise"
+        },
+        "stats": {
+            "0": {
+                "number": "250K+",
+                "label": "Core Boxes Sold"
+            },
+            "1": {
+                "number": "9+",
+                "label": "Years Experience"
+            },
+            "2": {
+                "number": "18+",
+                "label": "DESCO Rigs Deployed"
+            }
+        },
+        "image": {
+            "alt": "AITC Manufacturing Facility"
+        }
+    },
+    "WhatWeBelieve": {
+        "items": {
+            "provenExpertise": "Proven Expertise",
+            "globalPartnerships": "Global Partnerships",
+            "localManufacturing": "Local Manufacturing",
+            "strategicWarehouse": "Strategic Warehouse Facilities",
+            "balancedApproach": "Balanced Approach",
+            "vision2030": "Vision 2030 Aligned",
+            "tailoredSolutions": "Tailored Mining Solutions",
+            "oneStopProvider": "One-Stop Provider",
+            "safetyStandards": "High Safety & Quality Standards",
+            "comprehensiveSupport": "Comprehensive Support"
+        },
+        "heading": {
+            "label": "Why Choose AITC?",
+            "title": "Addaan International Trading Company"
+        },
+        "learnMore": "Learn more"
+    },
+    "DiscoverSection": {
+        "heading": {
+            "label": "About AITC",
+            "title": "Partnering with Global Leaders, Empowering Saudi Mining",
+            "description": "Founded in 2015, Addaan International Trading Company (AITC) is a leading provider of mining and exploration solutions in Saudi Arabia. We combine local manufacturing expertise with strong global partnerships to deliver innovative, high-quality products and technical services tailored to the mining industry."
+        },
+        "cards": [
+            {
+                "label": "Our Mission",
+                "title": "Deliver cutting-edge mining solutions that drive efficiency, sustainability, and industrial growth in alignment with Saudi Vision 2030."
+            },
+            {
+                "label": "Our Vision",
+                "title": "To lead the mining sector in technology, sustainability, and local manufacturing."
+            },
+            {
+                "label": "Years Experience",
+                "title": "9+ Years Experience"
+            },
+            {
+                "label": "Core Boxes Sold",
+                "title": "250K+ Core Boxes Sold"
+            }
+        ]
+    },
+    "MagazineSection": {
+        "heading": {
+            "title": "Explore the latest from Elements magazine"
+        },
+        "cards": [
+            {
+                "label": "Our Mission",
+                "title": "Deliver cutting-edge mining solutions that drive efficiency, sustainability, and industrial growth in alignment with Saudi Vision 2030."
+            },
+            {
+                "label": "Our Vision",
+                "title": "To lead the mining sector in technology, sustainability, and local manufacturing."
+            },
+            {
+                "label": "Years Experience",
+                "title": "9+ Years Experience"
+            },
+            {
+                "label": "Core Boxes Sold",
+                "title": "250K+ Core Boxes Sold"
+            },
+            {
+                "label": "Sustainability",
+                "title": "Driving sustainable mining practices for a greener future."
+            },
+            {
+                "label": "Innovation",
+                "title": "Pioneering advanced technologies to transform mining operations."
+            }
+        ]
+    },
+    "HeroSlider": {
+        "slides": [
+            {
+                "id": 1,
+                "title": "Adaan Mining – Durable, Saudi-Made Solutions",
+                "description": "Partnering with Global Leaders, Empowering Saudi Mining",
+                "buttonText": "Explore More",
+                "thumbTitle": "Adaan Mining"
+            },
+            {
+                "id": 2,
+                "title": "How can we help to engineer a better future for everyone?",
+                "description": "Dive into the deep blue and discover the mysteries of the underwater world.",
+                "buttonText": "Discover how",
+                "thumbTitle": "Powered by how"
+            },
+            {
+                "id": 3,
+                "title": "How Adaan is progressing toward a circular economy",
+                "description": "Experience the vastness and beauty of desert landscapes under the golden sun.",
+                "buttonText": "Read more",
+                "thumbTitle": "Elements magazine"
+            },
+            {
+                "id": 4,
+                "title": "Saudi Adaan published its half-year 2025 results on August 5, 2025.",
+                "description": "Witness the spectacular dance of the northern lights in the Arctic sky.",
+                "buttonText": "Learn More",
+                "thumbTitle": "Results announcement"
+            }
+        ]
+    },
+    "ContactConversion": {
+        "hero": {
+            "title": "Let's Build Something Amazing Together",
+            "description": "Ready to transform your ideas into reality? Our team of experts is here to help you create exceptional digital experiences that drive results."
+        },
+        "contact": {
+            "email": {
+                "label": "Email us at",
+                "address": "contact@adaan.com"
+            },
+            "response": {
+                "label": "Response time",
+                "time": "Within 24 hours"
+            }
+        },
+        "trust": {
+            "label": "Trusted by innovative teams worldwide",
+            "companies": {
+                "0": "Google",
+                "1": "Microsoft",
+                "2": "Apple",
+                "3": "Amazon",
+                "4": "Netflix"
+            }
+        },
+        "form": {
+            "title": "Start Your Project",
+            "subtitle": "Tell us about your requirements and we'll provide a detailed quote.",
+            "fields": {
+                "name": {
+                    "label": "Full Name",
+                    "placeholder": "Enter your full name"
+                },
+                "email": {
+                    "label": "Work Email",
+                    "placeholder": "your@company.com"
+                },
+                "project": {
+                    "label": "Project Requirements",
+                    "placeholder": "Describe your project goals, timeline, and any specific requirements..."
+                }
+            },
+            "submitButton": "Get Your Quote",
+            "submitting": "Submitting...",
+            "privacyNotice": "We respect your privacy. Unsubscribe at any time.",
+            "successMessage": "Thank you! We'll get back to you soon."
+        }
+    },
+    "VideoSection": {
+        "heading": {
+            "label": "Our History",
+            "title": "Helping to power progress around the world"
+        },
+        "exploreButton": "Explore Adaan",
+        "playbackError": "Your browser does not support the video tag."
+    },
+    "Sustainability": {
+        "heading": {
+            "label": "Our Partners",
+            "title": "Our Trusted Partners",
+            "description": "AITC collaborates with world-class brands to deliver cutting-edge solutions and maintain our position as a leader in mining technology."
+        },
+        "readMore": "Read more",
+        "partners": {
+            "imdex": {
+                "title": "IMDEX",
+                "description": "Experts in real-time mining data and drilling technology.",
+                "features": {
+                    "0": "Real-time Mining Data",
+                    "1": "Drilling Technologies",
+                    "2": "AMC Drilling Fluids",
+                    "3": "REFLEX Systems"
+                }
+            },
+            "crEpiroc": {
+                "title": "CR Powered by Epiroc",
+                "description": "Leaders in GET solutions and digital mining innovations.",
+                "features": {
+                    "0": "GET Solutions",
+                    "1": "Digital Mining",
+                    "2": "Cast Lips",
+                    "3": "Titan Software"
+                }
+            },
+            "desco": {
+                "title": "Desco Drilling",
+                "description": "Renowned for high-performance drilling rigs.",
+                "features": {
+                    "0": "Drilling Rigs",
+                    "1": "Surface Equipment",
+                    "2": "Underground Solutions",
+                    "3": "Rig Accessories"
+                }
+            }
+        }
+    },
+    "TimeLine": {
+        "heading": {
+            "label": "Our Journey",
+            "title": "Our Achievements",
+            "description": "A decade of innovation and excellence in the mining industry"
+        },
+        "readAllNews": "Read All News",
+        "learnMore": "Learn More",
+        "milestones": {
+            "2015": {
+                "title": "Establishing First Impressions",
+                "description": "Addaan International Trading Company (AITC) was founded, embarking on a mission to revolutionize the mining sector with innovative solutions."
+            },
+            "2016": {
+                "title": "Market Analysis and Vision",
+                "description": "Initiated market research to identify gaps in the mining industry, aligning efforts with Saudi Vision 2030 to drive growth and sustainability."
+            },
+            "2017": {
+                "title": "Strategic Partnerships",
+                "description": "Secured partnerships with leading drilling brands and charted a clear roadmap to become a comprehensive provider of mining technology solutions."
+            },
+            "2018": {
+                "title": "Smart Solutions",
+                "description": "Formed a strategic alliance with IMDEX, delivering cutting-edge logging and data solutions for the mining and exploration industries."
+            },
+            "2019": {
+                "title": "Resilience During COVID-19",
+                "description": "Successfully navigated the challenges of the pandemic, maintaining robust business operations and delivering exceptional client support."
+            },
+            "2020": {
+                "title": "Saudi-Made Innovations",
+                "description": "Pioneered the first Saudi-made core boxes, reducing reliance on imports and championing local manufacturing in line with Vision 2030."
+            },
+            "2021": {
+                "title": "Rapid Expansion",
+                "description": "Expanded significantly, deploying over 18 DESCO rigs across Saudi Arabia, reinforcing AITC's position as a market leader."
+            },
+            "2022": {
+                "title": "Core Tray Milestone",
+                "description": "Achieved sales of more than 200,000 core trays nationwide, while focusing on product enhancements and raw material development."
+            },
+            "2023": {
+                "title": "Record-Breaking Year",
+                "description": "Celebrated the company's most successful year, setting new records in growth, client satisfaction, and industry impact."
+            },
+            "2024": {
+                "title": "The Bronze Year",
+                "description": "Surpassed 250,000 core boxes sold. Established Saudi Arabia's first IMDEX repair centre, enhancing service efficiency and strengthening client relationships."
+            },
+            "2025": {
+                "title": "The Silver Year",
+                "description": "Continuing a legacy of innovation and excellence with anticipated achievements in technology and market expansion."
+            }
+        }
+    },
+    "AboutUs": {
+        "heading": "About us",
+        "learnMore": "Learn more",
+        "image": {
+            "alt": "Industrial facility at sunset"
+        }
+    },
+    "Footer": {
+        "sections": {
+            "quickLinks": "Quick Links",
+            "ourProducts": "Our Products",
+            "otherWebsites": "Other Websites"
+        },
+        "quickLinks": {
+            "home": "Home",
+            "aboutUs": "About Us",
+            "products": "Products",
+            "contact": "Contact",
+            "achievements": "Achievements"
+        },
+        "products": {
+            "coreTray": "AITC Core Trays",
+            "imdex": "IMDEX Solutions",
+            "desco": "DESCO Drilling Rigs",
+            "crEpiroc": "CR Powered by Epiroc",
+            "tools": "Drilling Tools"
+        },
+        "social": {
+            "twitter": "Twitter",
+            "facebook": "Facebook",
+            "linkedin": "LinkedIn",
+            "instagram": "Instagram",
+            "youtube": "YouTube"
+        },
+        "copyright": "© 2025 Adaan.",
+        "scrollTop": "Scroll to top",
+        "logo": {
+            "alt": "Addaan International Trading Company"
+        },
+        "language": {
+            "arabic": "العربية",
+            "english": "English"
+        }
+    }
+}
